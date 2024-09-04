@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36" version="24.7.10" pages="2">
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36" version="24.7.10" pages="3">
   <diagram name="Page-1" id="-H_mtQnk-PTXWXPvYvuk">
     <mxGraphModel dx="954" dy="674" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
@@ -52,6 +52,62 @@
         </mxCell>
         <mxCell id="_ooouyw1NpH6NiT1387p-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="FDlKx7gpdqo5DVc2s33Y-1" source="_ooouyw1NpH6NiT1387p-1" target="_ooouyw1NpH6NiT1387p-2">
           <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="Реплика Mongo" id="yNSP5jdp-R8kP2ecyqga">
+    <mxGraphModel dx="1674" dy="761" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="H3SNNi3cyJgp-hu7VIvs-0" />
+        <mxCell id="H3SNNi3cyJgp-hu7VIvs-1" parent="H3SNNi3cyJgp-hu7VIvs-0" />
+        <mxCell id="H3SNNi3cyJgp-hu7VIvs-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="H3SNNi3cyJgp-hu7VIvs-1" source="GGggcZPymvDrgz9PGXHm-1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="780" y="450" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="530" y="700" />
+              <mxPoint x="781" y="700" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="H3SNNi3cyJgp-hu7VIvs-3" value="MongoDB&lt;br&gt;Шард 1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="H3SNNi3cyJgp-hu7VIvs-1">
+          <mxGeometry x="480" y="570" width="60" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="H3SNNi3cyJgp-hu7VIvs-4" value="pymongo-api" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="H3SNNi3cyJgp-hu7VIvs-1">
+          <mxGeometry x="360" y="290" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="H3SNNi3cyJgp-hu7VIvs-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="H3SNNi3cyJgp-hu7VIvs-1" source="H3SNNi3cyJgp-hu7VIvs-4" target="H3SNNi3cyJgp-hu7VIvs-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="H3SNNi3cyJgp-hu7VIvs-6" value="Конфигурационный сервер" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="H3SNNi3cyJgp-hu7VIvs-1">
+          <mxGeometry x="720" y="380" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="H3SNNi3cyJgp-hu7VIvs-7" value="Роутер" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="H3SNNi3cyJgp-hu7VIvs-1">
+          <mxGeometry x="520" y="440" width="110" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="H3SNNi3cyJgp-hu7VIvs-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="H3SNNi3cyJgp-hu7VIvs-1" source="GGggcZPymvDrgz9PGXHm-3" target="H3SNNi3cyJgp-hu7VIvs-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="H3SNNi3cyJgp-hu7VIvs-9" value="MongoDB&lt;br&gt;Шард2" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="H3SNNi3cyJgp-hu7VIvs-1">
+          <mxGeometry x="600" y="570" width="60" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="H3SNNi3cyJgp-hu7VIvs-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="H3SNNi3cyJgp-hu7VIvs-1" source="H3SNNi3cyJgp-hu7VIvs-7" target="H3SNNi3cyJgp-hu7VIvs-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="H3SNNi3cyJgp-hu7VIvs-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="H3SNNi3cyJgp-hu7VIvs-1" source="H3SNNi3cyJgp-hu7VIvs-7" target="H3SNNi3cyJgp-hu7VIvs-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GGggcZPymvDrgz9PGXHm-0" value="MongoDB&lt;br&gt;Шард 1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="H3SNNi3cyJgp-hu7VIvs-1">
+          <mxGeometry x="490" y="580" width="60" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="GGggcZPymvDrgz9PGXHm-1" value="MongoDB&lt;br&gt;Шард 1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="H3SNNi3cyJgp-hu7VIvs-1">
+          <mxGeometry x="500" y="590" width="60" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="GGggcZPymvDrgz9PGXHm-2" value="MongoDB&lt;br&gt;Шард2" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="H3SNNi3cyJgp-hu7VIvs-1">
+          <mxGeometry x="610" y="580" width="60" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="GGggcZPymvDrgz9PGXHm-3" value="MongoDB&lt;br&gt;Шард2" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="H3SNNi3cyJgp-hu7VIvs-1">
+          <mxGeometry x="620" y="590" width="60" height="80" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
