@@ -13,8 +13,11 @@ services:
       - mongos_router
     ports:
       - 8080:8080
+    networks:
+      app-network:
+        ipv4_address: 173.17.0.100
     environment:
-      MONGODB_URL: "mongodb://mongos_router:27020"
+      MONGODB_URL: "mongodb://mongos_router:27017"
       MONGODB_DATABASE_NAME: "somedb"
 
   configSrv:
@@ -22,7 +25,7 @@ services:
     container_name: configSrv
     restart: always
     ports:
-      - "27017:27017"
+      - "27020:27020"
     networks:
       app-network:
         ipv4_address: 173.17.0.10
@@ -36,10 +39,10 @@ services:
         "config_server",
         "--bind_ip_all",
         "--port",
-        "27017"
+        "27020"
       ]
     healthcheck:
-      test: [ "CMD", "mongosh", "--eval", "db.adminCommand('ping')" ]
+      test: [ "CMD", "mongosh", "--port", "27020", "--eval", "db.adminCommand('ping')" ]
       interval: 5s
       start_period: 10s
 
@@ -100,7 +103,7 @@ services:
     container_name: mongos_router
     restart: always
     ports:
-      - "27020:27020"
+      - "27017:27017"
     networks:
       app-network:
         ipv4_address: 173.17.0.7
@@ -110,13 +113,13 @@ services:
       [
         "mongos",
         "--configdb",
-        "config_server/configSrv:27017",
+        "config_server/configSrv:27020",
         "--bind_ip_all",
         "--port",
-        "27020"
+        "27017"
       ]
     healthcheck:
-      test: [ "CMD", "mongosh", "--port", "27020", "--eval", "db.adminCommand('ping')" ]
+      test: [ "CMD", "mongosh", "--port", "27017", "--eval", "db.adminCommand('ping')" ]
       interval: 5s
       start_period: 10s
 
