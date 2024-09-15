@@ -1,5 +1,9 @@
 # pymongo-api
 
+## Схема draw.io в файле 
+
+[Task1.drawio](../Task1.drawio)
+
 ## Как запустить
 
 Запускаем mongodb и приложение
