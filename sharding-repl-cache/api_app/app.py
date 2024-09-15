@@ -56,7 +56,7 @@ PyObjectId = Annotated[str, BeforeValidator(str)]
 @app.on_event("startup")
 async def startup():
     if REDIS_URL:
-        redis = aioredis.from_url(REDIS_URL, encoding="utf8", decode_responses=True)
+        redis = aioredis.RedisCluster.from_url(REDIS_URL)
         FastAPICache.init(RedisBackend(redis), prefix="api:cache")
 
 
